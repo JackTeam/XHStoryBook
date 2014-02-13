@@ -22,6 +22,7 @@
 		AB0457AA18AD883100FDCDD3 /* XHPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457A918AD883100FDCDD3 /* XHPageViewController.m */; };
 		AB0457F818AD8C6F00FDCDD3 /* XHBookDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457F718AD8C6F00FDCDD3 /* XHBookDataViewController.m */; };
 		AB0457FB18AD8C9600FDCDD3 /* XHBookModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */; };
+		AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		AB0457F718AD8C6F00FDCDD3 /* XHBookDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookDataViewController.m; sourceTree = "<group>"; };
 		AB0457F918AD8C9600FDCDD3 /* XHBookModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBookModelManager.h; sourceTree = "<group>"; };
 		AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookModelManager.m; sourceTree = "<group>"; };
+		AB0457FD18AD8E8100FDCDD3 /* XHBookContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBookContainerViewController.h; sourceTree = "<group>"; };
+		AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,7 @@
 		AB0457A118AD87B700FDCDD3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB0457FC18AD8E6100FDCDD3 /* XHBookContainerViewController */,
 				AB0457F518AD8C3300FDCDD3 /* XHBookDataViewController */,
 				AB0457A718AD87EA00FDCDD3 /* XHPageViewController */,
 			);
@@ -232,6 +236,15 @@
 				AB0457F718AD8C6F00FDCDD3 /* XHBookDataViewController.m */,
 			);
 			name = XHBookDataViewController;
+			sourceTree = "<group>";
+		};
+		AB0457FC18AD8E6100FDCDD3 /* XHBookContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB0457FD18AD8E8100FDCDD3 /* XHBookContainerViewController.h */,
+				AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */,
+			);
+			name = XHBookContainerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB04578118AD839200FDCDD3 /* AppDelegate.m in Sources */,
+				AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */,
 				AB0457F818AD8C6F00FDCDD3 /* XHBookDataViewController.m in Sources */,
 				AB04577D18AD839200FDCDD3 /* main.m in Sources */,
 				AB0457FB18AD8C9600FDCDD3 /* XHBookModelManager.m in Sources */,

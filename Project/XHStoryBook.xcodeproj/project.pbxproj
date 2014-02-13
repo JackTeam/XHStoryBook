@@ -193,8 +193,7 @@
 		AB0457A318AD87C500FDCDD3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AB0457F918AD8C9600FDCDD3 /* XHBookModelManager.h */,
-				AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */,
+				AB04580018AD8F0800FDCDD3 /* XHBookModelManager */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -245,6 +244,15 @@
 				AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */,
 			);
 			name = XHBookContainerViewController;
+			sourceTree = "<group>";
+		};
+		AB04580018AD8F0800FDCDD3 /* XHBookModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				AB0457F918AD8C9600FDCDD3 /* XHBookModelManager.h */,
+				AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */,
+			);
+			name = XHBookModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

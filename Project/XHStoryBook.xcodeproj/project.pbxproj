@@ -19,6 +19,7 @@
 		AB04578C18AD839200FDCDD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB04577418AD839200FDCDD3 /* UIKit.framework */; };
 		AB04579418AD839200FDCDD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB04579218AD839200FDCDD3 /* InfoPlist.strings */; };
 		AB04579618AD839200FDCDD3 /* XHStoryBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04579518AD839200FDCDD3 /* XHStoryBookTests.m */; };
+		AB0457AA18AD883100FDCDD3 /* XHPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457A918AD883100FDCDD3 /* XHPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		AB04579118AD839200FDCDD3 /* XHStoryBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XHStoryBookTests-Info.plist"; sourceTree = "<group>"; };
 		AB04579318AD839200FDCDD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB04579518AD839200FDCDD3 /* XHStoryBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHStoryBookTests.m; sourceTree = "<group>"; };
+		AB0457A018AD87B000FDCDD3 /* XHStoryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStoryBook.h; sourceTree = "<group>"; };
+		AB0457A818AD883100FDCDD3 /* XHPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPageViewController.h; sourceTree = "<group>"; };
+		AB0457A918AD883100FDCDD3 /* XHPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		AB04576418AD839200FDCDD3 = {
 			isa = PBXGroup;
 			children = (
+				AB04579F18AD879B00FDCDD3 /* Source */,
 				AB04577618AD839200FDCDD3 /* XHStoryBook */,
 				AB04578F18AD839200FDCDD3 /* XHStoryBookTests */,
 				AB04576F18AD839200FDCDD3 /* Frameworks */,
@@ -142,6 +147,73 @@
 				AB04579218AD839200FDCDD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB04579F18AD879B00FDCDD3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AB0457A018AD87B000FDCDD3 /* XHStoryBook.h */,
+				AB0457A618AD87DB00FDCDD3 /* Categorys */,
+				AB0457A518AD87D200FDCDD3 /* Vendor */,
+				AB0457A418AD87CA00FDCDD3 /* Common */,
+				AB0457A318AD87C500FDCDD3 /* Models */,
+				AB0457A218AD87BF00FDCDD3 /* Views */,
+				AB0457A118AD87B700FDCDD3 /* Controllers */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		AB0457A118AD87B700FDCDD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB0457A718AD87EA00FDCDD3 /* XHPageViewController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AB0457A218AD87BF00FDCDD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AB0457A318AD87C500FDCDD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AB0457A418AD87CA00FDCDD3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		AB0457A518AD87D200FDCDD3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		AB0457A618AD87DB00FDCDD3 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categorys;
+			sourceTree = "<group>";
+		};
+		AB0457A718AD87EA00FDCDD3 /* XHPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB0457A818AD883100FDCDD3 /* XHPageViewController.h */,
+				AB0457A918AD883100FDCDD3 /* XHPageViewController.m */,
+			);
+			name = XHPageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +313,7 @@
 			files = (
 				AB04578118AD839200FDCDD3 /* AppDelegate.m in Sources */,
 				AB04577D18AD839200FDCDD3 /* main.m in Sources */,
+				AB0457AA18AD883100FDCDD3 /* XHPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +516,7 @@
 				AB04579B18AD839200FDCDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB04579C18AD839200FDCDD3 /* Build configuration list for PBXNativeTarget "XHStoryBookTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +525,7 @@
 				AB04579E18AD839200FDCDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface XHBookDataPaperViewController : UIViewController
-
+@property (nonatomic, strong) XHBookPaper *bookPaper;
 @end

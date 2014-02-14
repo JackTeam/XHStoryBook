@@ -8,11 +8,9 @@
 
 #import "XHBookModelManager.h"
 
-#import "XHBookDataPaperViewController.h"
-
 @interface XHBookModelManager ()
 
-@property (nonatomic, strong) NSArray *books;
+@property (nonatomic, strong) NSArray *bookPapers;
 
 @end
 
@@ -20,17 +18,25 @@
 
 #pragma mark - Propertys
 
-- (NSArray *)books {
-    if (!_books) {
-        _books = [[NSArray alloc] init];
+- (NSArray *)bookPapers {
+    if (!_bookPapers) {
+        _bookPapers = [[NSArray alloc] init];
     }
-    return _books;
+    return _bookPapers;
 }
 
 #pragma mark - Life cycle
 
 - (void)_setup {
-    
+    NSMutableArray *bookPapers = [NSMutableArray new];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSMutableArray *monthSymbols = [[dateFormatter monthSymbols] copy];
+    for (NSString *description in monthSymbols) {
+        XHBookPaper *bookPaper = [[XHBookPaper alloc] init];
+        bookPaper.description = description;
+        [bookPapers addObject:bookPaper];
+    }
+    self.bookPapers = bookPapers;
 }
 
 - (id)init {
@@ -41,15 +47,22 @@
     return self;
 }
 
+- (NSUInteger)indexOfViewController:(XHBookDataPaperViewController *)viewController
+{
+    // Return the index of the given data view controller.
+    // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
+    return [self.bookPapers indexOfObject:viewController.bookPaper];
+}
+
 - (XHBookDataPaperViewController *)viewControllerAtIndex:(NSUInteger)index {
     // Return the data view controller for the given index.
-    if (([self.books count] == 0) || (index >= [self.books count])) {
+    if (([self.bookPapers count] == 0) || (index >= [self.bookPapers count])) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
     XHBookDataPaperViewController *bookDataViewController = [[XHBookDataPaperViewController alloc] init];
-    
+    bookDataViewController.bookPaper = self.bookPapers[index];
     return bookDataViewController;
 }
 
@@ -72,7 +85,7 @@
     }
     
     index++;
-    if (index == [self.books count]) {
+    if (index == [self.bookPapers count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index];

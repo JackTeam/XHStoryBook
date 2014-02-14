@@ -9,8 +9,8 @@
 #ifndef XHStoryBook_XHStoryBook_h
 #define XHStoryBook_XHStoryBook_h
 
+#import "XHBookModelManager.h"
 #import "XHBookContainerViewController.h"
 #import "XHBookDataViewController.h"
-#import "XHPageViewController.h"
-#import "XHBookModelManager.h"
+
 #endif

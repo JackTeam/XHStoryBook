@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHPageViewController.h"
 
-@interface XHBookContainerViewController : UIViewController
-
+@interface XHBookContainerViewController : UIViewController <UIPageViewControllerDelegate>
+@property (nonatomic, strong) XHPageViewController *pageViewController;
 @end

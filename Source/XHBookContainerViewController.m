@@ -8,6 +8,8 @@
 
 #import "XHBookContainerViewController.h"
 
+#import "XHCommon.h"
+
 @interface XHBookContainerViewController ()
 @property (readonly, strong, nonatomic) XHBookModelManager *bookModelManager;
 @end
@@ -69,9 +71,8 @@
     
     // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
     CGRect pageViewRect = self.view.bounds;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
-    }
+    pageViewRect.origin.y = [XHCommon getAdaptorHeight];
+    pageViewRect.size.height -= [XHCommon getAdaptorHeight];
     self.pageViewController.view.frame = pageViewRect;
     
     [self.pageViewController didMoveToParentViewController:self];
@@ -85,6 +86,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithRed:153 green:102 blue:51 alpha:1.0];
+    self.title = NSLocalizedString(@"StoryBook", @"");
     [self _setupPageViewController];
 }
 

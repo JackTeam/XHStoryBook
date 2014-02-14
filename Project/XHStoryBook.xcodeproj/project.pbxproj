@@ -23,6 +23,8 @@
 		AB0457F818AD8C6F00FDCDD3 /* XHBookDataPaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457F718AD8C6F00FDCDD3 /* XHBookDataPaperViewController.m */; };
 		AB0457FB18AD8C9600FDCDD3 /* XHBookModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */; };
 		AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */; };
+		AB8DCE6D18AE2AF6000D5B8A /* XHCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8DCE6C18AE2AF6000D5B8A /* XHCommon.m */; };
+		AB8DCE7018AE3951000D5B8A /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8DCE6F18AE3951000D5B8A /* XHViewController.m */; };
 		ABB9C14E18AD9A0D0098D4C7 /* XHBookPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,10 @@
 		AB0457FA18AD8C9600FDCDD3 /* XHBookModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookModelManager.m; sourceTree = "<group>"; };
 		AB0457FD18AD8E8100FDCDD3 /* XHBookContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBookContainerViewController.h; sourceTree = "<group>"; };
 		AB0457FE18AD8E8100FDCDD3 /* XHBookContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookContainerViewController.m; sourceTree = "<group>"; };
+		AB8DCE6B18AE2AF6000D5B8A /* XHCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCommon.h; sourceTree = "<group>"; };
+		AB8DCE6C18AE2AF6000D5B8A /* XHCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCommon.m; sourceTree = "<group>"; };
+		AB8DCE6E18AE3951000D5B8A /* XHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewController.h; sourceTree = "<group>"; };
+		AB8DCE6F18AE3951000D5B8A /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
 		ABB9C14C18AD9A0D0098D4C7 /* XHBookPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBookPaper.h; sourceTree = "<group>"; };
 		ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookPaper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +132,8 @@
 			children = (
 				AB04577F18AD839200FDCDD3 /* AppDelegate.h */,
 				AB04578018AD839200FDCDD3 /* AppDelegate.m */,
+				AB8DCE6E18AE3951000D5B8A /* XHViewController.h */,
+				AB8DCE6F18AE3951000D5B8A /* XHViewController.m */,
 				AB04578218AD839200FDCDD3 /* Images.xcassets */,
 				AB04577718AD839200FDCDD3 /* Supporting Files */,
 			);
@@ -205,6 +213,8 @@
 		AB0457A418AD87CA00FDCDD3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AB8DCE6B18AE2AF6000D5B8A /* XHCommon.h */,
+				AB8DCE6C18AE2AF6000D5B8A /* XHCommon.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -365,10 +375,12 @@
 			files = (
 				ABB9C14E18AD9A0D0098D4C7 /* XHBookPaper.m in Sources */,
 				AB04578118AD839200FDCDD3 /* AppDelegate.m in Sources */,
+				AB8DCE7018AE3951000D5B8A /* XHViewController.m in Sources */,
 				AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */,
 				AB0457F818AD8C6F00FDCDD3 /* XHBookDataPaperViewController.m in Sources */,
 				AB04577D18AD839200FDCDD3 /* main.m in Sources */,
 				AB0457FB18AD8C9600FDCDD3 /* XHBookModelManager.m in Sources */,
+				AB8DCE6D18AE2AF6000D5B8A /* XHCommon.m in Sources */,
 				AB0457AA18AD883100FDCDD3 /* XHPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

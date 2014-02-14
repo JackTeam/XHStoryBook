@@ -26,6 +26,8 @@
 		AB8DCE6D18AE2AF6000D5B8A /* XHCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8DCE6C18AE2AF6000D5B8A /* XHCommon.m */; };
 		AB8DCE7018AE3951000D5B8A /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8DCE6F18AE3951000D5B8A /* XHViewController.m */; };
 		ABB9C14E18AD9A0D0098D4C7 /* XHBookPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */; };
+		ABEDF9D818AE706200C9AB88 /* XHMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDF9D718AE706200C9AB88 /* XHMenuView.m */; };
+		ABEDF9DB18AE707F00C9AB88 /* XHMenuItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		AB8DCE6F18AE3951000D5B8A /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
 		ABB9C14C18AD9A0D0098D4C7 /* XHBookPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBookPaper.h; sourceTree = "<group>"; };
 		ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBookPaper.m; sourceTree = "<group>"; };
+		ABEDF9D618AE706200C9AB88 /* XHMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenuView.h; sourceTree = "<group>"; };
+		ABEDF9D718AE706200C9AB88 /* XHMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuView.m; sourceTree = "<group>"; };
+		ABEDF9D918AE707F00C9AB88 /* XHMenuItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenuItemButton.h; sourceTree = "<group>"; };
+		ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuItemButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 		AB0457A218AD87BF00FDCDD3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ABEDF9D518AE6D9500C9AB88 /* XHMenuView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -276,6 +283,17 @@
 				ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */,
 			);
 			name = XHBookPaper;
+			sourceTree = "<group>";
+		};
+		ABEDF9D518AE6D9500C9AB88 /* XHMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				ABEDF9D618AE706200C9AB88 /* XHMenuView.h */,
+				ABEDF9D718AE706200C9AB88 /* XHMenuView.m */,
+				ABEDF9D918AE707F00C9AB88 /* XHMenuItemButton.h */,
+				ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */,
+			);
+			name = XHMenuView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEDF9DB18AE707F00C9AB88 /* XHMenuItemButton.m in Sources */,
 				ABB9C14E18AD9A0D0098D4C7 /* XHBookPaper.m in Sources */,
 				AB04578118AD839200FDCDD3 /* AppDelegate.m in Sources */,
 				AB8DCE7018AE3951000D5B8A /* XHViewController.m in Sources */,
+				ABEDF9D818AE706200C9AB88 /* XHMenuView.m in Sources */,
 				AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */,
 				AB0457F818AD8C6F00FDCDD3 /* XHBookDataPaperViewController.m in Sources */,
 				AB04577D18AD839200FDCDD3 /* main.m in Sources */,

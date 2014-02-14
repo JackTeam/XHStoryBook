@@ -1,5 +1,5 @@
 //
-//  XHBookDataViewController.h
+//  XHBookDataPaperViewController.h
 //  XHStoryBook
 //
 //  Created by 曾 宪华 on 14-2-13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XHBookDataViewController : UIViewController
+@interface XHBookDataPaperViewController : UIViewController
 
 @end

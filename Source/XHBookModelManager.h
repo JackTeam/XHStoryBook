@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-@class XHBookDataViewController;
+@class XHBookDataPaperViewController;
 
 @interface XHBookModelManager : NSObject <UIPageViewControllerDataSource>
-- (XHBookDataViewController *)viewControllerAtIndex:(NSUInteger)index;
-- (NSUInteger)indexOfViewController:(XHBookDataViewController *)viewController;
+- (XHBookDataPaperViewController *)viewControllerAtIndex:(NSUInteger)index;
+- (NSUInteger)indexOfViewController:(XHBookDataPaperViewController *)viewController;
 @end

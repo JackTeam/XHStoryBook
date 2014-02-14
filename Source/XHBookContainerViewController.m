@@ -58,7 +58,7 @@
     self.pageViewController = [[XHPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
     
-    XHBookDataViewController *startingViewController = [self.bookModelManager viewControllerAtIndex:0];
+    XHBookDataPaperViewController *startingViewController = [self.bookModelManager viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     

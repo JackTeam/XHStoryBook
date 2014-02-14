@@ -8,7 +8,7 @@
 
 #import "XHBookModelManager.h"
 
-#import "XHBookDataViewController.h"
+#import "XHBookDataPaperViewController.h"
 
 @interface XHBookModelManager ()
 
@@ -41,14 +41,14 @@
     return self;
 }
 
-- (XHBookDataViewController *)viewControllerAtIndex:(NSUInteger)index {
+- (XHBookDataPaperViewController *)viewControllerAtIndex:(NSUInteger)index {
     // Return the data view controller for the given index.
     if (([self.books count] == 0) || (index >= [self.books count])) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
-    XHBookDataViewController *bookDataViewController = [[XHBookDataViewController alloc] init];
+    XHBookDataPaperViewController *bookDataViewController = [[XHBookDataPaperViewController alloc] init];
     
     return bookDataViewController;
 }
@@ -56,7 +56,7 @@
 #pragma mark - Page View Controller Data Source
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSUInteger index = [self indexOfViewController:(XHBookDataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(XHBookDataPaperViewController *)viewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -66,7 +66,7 @@
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSUInteger index = [self indexOfViewController:(XHBookDataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(XHBookDataPaperViewController *)viewController];
     if (index == NSNotFound) {
         return nil;
     }

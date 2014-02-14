@@ -11,6 +11,6 @@
 
 #import "XHBookModelManager.h"
 #import "XHBookContainerViewController.h"
-#import "XHBookDataViewController.h"
+#import "XHBookDataPaperViewController.h"
 
 #endif

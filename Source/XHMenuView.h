@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XHMenuView;
+@protocol XHMenuViewDelegate <NSObject>
+
+@optional
+- (void)menuView:(XHMenuView *)menuView didSelectedItemAtIndex:(NSUInteger)index;
+
+@end
 
 @interface XHMenuView : UIView
+@property (nonatomic, assign) id <XHMenuViewDelegate> delegate;
+@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, assign) BOOL onScreen;
 
+- (void)show;
+- (void)hide;
+- (void)reloadData;
 @end

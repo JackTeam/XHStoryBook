@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef enum {
+    XHMenuItemButtonFadeIn,
+    XHMenuItemButtonFadeOut
+} XHMenuItemButtonState;
 @interface XHMenuItemButton : UIButton
-
+@property (nonatomic, assign) CGFloat degree;
+@property (nonatomic, assign) XHMenuItemButtonState state;
+- (void)show;
+- (void)hide;
 @end

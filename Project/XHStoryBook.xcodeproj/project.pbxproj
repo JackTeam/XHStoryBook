@@ -28,6 +28,10 @@
 		ABB9C14E18AD9A0D0098D4C7 /* XHBookPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB9C14D18AD9A0D0098D4C7 /* XHBookPaper.m */; };
 		ABEDF9D818AE706200C9AB88 /* XHMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDF9D718AE706200C9AB88 /* XHMenuView.m */; };
 		ABEDF9DB18AE707F00C9AB88 /* XHMenuItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */; };
+		ABEDF9DF18AE851300C9AB88 /* petal-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEDF9DC18AE851300C9AB88 /* petal-facebook@2x.png */; };
+		ABEDF9E018AE851300C9AB88 /* petal-save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEDF9DD18AE851300C9AB88 /* petal-save@2x.png */; };
+		ABEDF9E118AE851300C9AB88 /* petal-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEDF9DE18AE851300C9AB88 /* petal-twitter@2x.png */; };
+		ABEDF9E418AE868800C9AB88 /* XHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDF9E318AE868800C9AB88 /* XHMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,11 @@
 		ABEDF9D718AE706200C9AB88 /* XHMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuView.m; sourceTree = "<group>"; };
 		ABEDF9D918AE707F00C9AB88 /* XHMenuItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenuItemButton.h; sourceTree = "<group>"; };
 		ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuItemButton.m; sourceTree = "<group>"; };
+		ABEDF9DC18AE851300C9AB88 /* petal-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-facebook@2x.png"; sourceTree = "<group>"; };
+		ABEDF9DD18AE851300C9AB88 /* petal-save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-save@2x.png"; sourceTree = "<group>"; };
+		ABEDF9DE18AE851300C9AB88 /* petal-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-twitter@2x.png"; sourceTree = "<group>"; };
+		ABEDF9E218AE868800C9AB88 /* XHMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMenuItem.h; sourceTree = "<group>"; };
+		ABEDF9E318AE868800C9AB88 /* XHMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +158,9 @@
 		AB04577718AD839200FDCDD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ABEDF9DC18AE851300C9AB88 /* petal-facebook@2x.png */,
+				ABEDF9DD18AE851300C9AB88 /* petal-save@2x.png */,
+				ABEDF9DE18AE851300C9AB88 /* petal-twitter@2x.png */,
 				AB04577818AD839200FDCDD3 /* XHStoryBook-Info.plist */,
 				AB04577918AD839200FDCDD3 /* InfoPlist.strings */,
 				AB04577C18AD839200FDCDD3 /* main.m */,
@@ -292,6 +304,8 @@
 				ABEDF9D718AE706200C9AB88 /* XHMenuView.m */,
 				ABEDF9D918AE707F00C9AB88 /* XHMenuItemButton.h */,
 				ABEDF9DA18AE707F00C9AB88 /* XHMenuItemButton.m */,
+				ABEDF9E218AE868800C9AB88 /* XHMenuItem.h */,
+				ABEDF9E318AE868800C9AB88 /* XHMenuItem.m */,
 			);
 			name = XHMenuView;
 			sourceTree = "<group>";
@@ -371,7 +385,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEDF9E018AE851300C9AB88 /* petal-save@2x.png in Resources */,
+				ABEDF9E118AE851300C9AB88 /* petal-twitter@2x.png in Resources */,
 				AB04577B18AD839200FDCDD3 /* InfoPlist.strings in Resources */,
+				ABEDF9DF18AE851300C9AB88 /* petal-facebook@2x.png in Resources */,
 				AB04578318AD839200FDCDD3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +415,7 @@
 				ABEDF9D818AE706200C9AB88 /* XHMenuView.m in Sources */,
 				AB0457FF18AD8E8200FDCDD3 /* XHBookContainerViewController.m in Sources */,
 				AB0457F818AD8C6F00FDCDD3 /* XHBookDataPaperViewController.m in Sources */,
+				ABEDF9E418AE868800C9AB88 /* XHMenuItem.m in Sources */,
 				AB04577D18AD839200FDCDD3 /* main.m in Sources */,
 				AB0457FB18AD8C9600FDCDD3 /* XHBookModelManager.m in Sources */,
 				AB8DCE6D18AE2AF6000D5B8A /* XHCommon.m in Sources */,

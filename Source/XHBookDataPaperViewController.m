@@ -8,30 +8,13 @@
 
 #import "XHBookDataPaperViewController.h"
 
-#import "XHMenuView.h"
-#import "XHMenuItem.h"
-
-@interface XHBookDataPaperViewController () <XHMenuViewDelegate>
+@interface XHBookDataPaperViewController ()
 
 @property (nonatomic, strong) UILabel *descriptionLabel;
-@property (nonatomic, strong) XHMenuView *menuView;
 
 @end
 
 @implementation XHBookDataPaperViewController
-
-#pragma mark - Propertys
-
-- (XHMenuView *)menuView {
-    if (!_menuView) {
-        _menuView = [[XHMenuView alloc] init];
-        _menuView.delegate = self;
-        _menuView.menuItems = [NSArray arrayWithObjects:[[XHMenuItem alloc] initWithNormalImage:[UIImage imageNamed:@"petal-facebook"] highlightedImage:nil], [[XHMenuItem alloc] initWithNormalImage:[UIImage imageNamed:@"petal-save"] highlightedImage:nil], [[XHMenuItem alloc] initWithNormalImage:[UIImage imageNamed:@"petal-twitter"] highlightedImage:nil], nil];
-        [self.view addSubview:_menuView];
-        [_menuView reloadData];
-    }
-    return _menuView;
-}
 
 #pragma mark - Life cycle
 
@@ -49,7 +32,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.menuView show];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,12 +64,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - XHMenuViewDelegate
-
-- (void)menuView:(XHMenuView *)menuView didSelectedItemAtIndex:(NSUInteger)index {
-    NSLog(@"index : %d", index);
 }
 
 @end

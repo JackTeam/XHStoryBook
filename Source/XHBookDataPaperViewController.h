@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol XHBookDataPaperViewControllerDelegate <NSObject>
+
+- (void)tapBookDataPaperViewController:(XHBookDataPaperViewController *)bookDataPaperViewController;
+
+@end
+
 @interface XHBookDataPaperViewController : UIViewController
+@property (nonatomic, assign) id <XHBookDataPaperViewControllerDelegate> delegate;
 @property (nonatomic, strong) XHBookPaper *bookPaper;
 @end

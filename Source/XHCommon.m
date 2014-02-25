@@ -16,4 +16,12 @@
     }
     return adaptorHeight;
 }
+
++ (CGRect)getRectWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
+    CGRect rect = CGRectMake(MIN(startPoint.x, endPoint.x),
+                             MIN(startPoint.y, endPoint.y),
+                             fabs(startPoint.x - endPoint.x),
+                             fabs(startPoint.y - endPoint.y));
+    return rect;
+}
 @end

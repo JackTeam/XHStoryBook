@@ -10,4 +10,6 @@
 
 @interface XHCommon : NSObject
 + (CGFloat)getAdaptorHeight;
+
++ (CGRect)getRectWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
 @end

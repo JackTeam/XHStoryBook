@@ -10,8 +10,13 @@
 
 #import "XHCommon.h"
 
-@interface XHBookContainerViewController ()
+@interface XHBookContainerViewController () <XHBookDataPaperViewControllerDelegate>
+
 @property (readonly, strong, nonatomic) XHBookModelManager *bookModelManager;
+
+@property (nonatomic, assign) BOOL isShowNavigationBar;
+- (void)showNaivgationBar;
+- (void)hideNaivgationBar;
 @end
 
 @implementation XHBookContainerViewController
@@ -40,12 +45,39 @@
     return self;
 }
 
+- (void)showNaivgationBar {
+    [self _controlNavigationBar:YES];
+}
+
+- (void)hideNaivgationBar {
+    [self _controlNavigationBar:NO];
+}
+
+- (void)_controlNavigationBar:(BOOL)show {
+    CGRect naivgationBarFrame = self.navigationController.navigationBar.frame;
+    CGFloat padding = 0;
+    if ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0) {
+        padding = 20;
+    }
+    if (show) {
+        naivgationBarFrame.origin.y += 44 + padding;
+    } else {
+        naivgationBarFrame.origin.y -= 44 + padding;
+    }
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.navigationController.navigationBar.frame = naivgationBarFrame;
+    } completion:^(BOOL finished) {
+        self.isShowNavigationBar = show;
+    }];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self hideNaivgationBar];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -70,11 +102,6 @@
     [self.view addSubview:self.pageViewController.view];
     
     // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    pageViewRect.origin.y = [XHCommon getAdaptorHeight];
-    pageViewRect.size.height -= [XHCommon getAdaptorHeight];
-    self.pageViewController.view.frame = pageViewRect;
-    
     [self.pageViewController didMoveToParentViewController:self];
     
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
@@ -96,10 +123,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - XHBookDataPaperViewControllerDelegate method
+
+- (void)tapBookDataPaperViewController:(XHBookDataPaperViewController *)bookDataPaperViewController {
+    if (self.isShowNavigationBar) {
+        [self hideNaivgationBar];
+    } else {
+        [self showNaivgationBar];
+    }
+}
+
 #pragma mark - UIPageViewController delegate methods
 
  - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
- 
+     
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
+    if (self.isShowNavigationBar) {
+        [self hideNaivgationBar];
+    }
 }
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation

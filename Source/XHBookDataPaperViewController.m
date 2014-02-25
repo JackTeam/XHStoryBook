@@ -8,13 +8,43 @@
 
 #import "XHBookDataPaperViewController.h"
 
+#import "XHMenuView.h"
+
 @interface XHBookDataPaperViewController ()
 
 @property (nonatomic, strong) UILabel *descriptionLabel;
-
+@property (nonatomic, strong) XHMenuView *menuView;
 @end
 
 @implementation XHBookDataPaperViewController
+
+#pragma mark - Propertys
+
+- (XHMenuView *)menuView {
+    if (!_menuView) {
+        _menuView = [[XHMenuView alloc] init];
+        [self.view addSubview:_menuView];
+    }
+    return _menuView;
+}
+
+#pragma mark - Action
+
+- (void)tapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if ([self.delegate respondsToSelector:@selector(tapBookDataPaperViewController:)]) {
+        [self.delegate tapBookDataPaperViewController:self];
+    }
+}
+
+#pragma mark - UIGesture Delegate Functions
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    CGPoint touchPoint = [touch locationInView:self.view];
+    if (touchPoint.x < 220 && touchPoint.x > 100 && ![touch.view isKindOfClass:[UIButton class]])
+        return YES;
+    else
+        return NO;
+}
 
 #pragma mark - Life cycle
 
@@ -46,11 +76,19 @@
     [super viewDidDisappear:animated];
 }
 
+- (void)_setupGesture {
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
+    [tapGestureRecognizer setNumberOfTapsRequired:1];
+    [tapGestureRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithRed:249 green:234 blue:188 alpha:1.0];
+    [self _setupGesture];
     
     _descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 66)];
     _descriptionLabel.text = self.bookPaper.description;
